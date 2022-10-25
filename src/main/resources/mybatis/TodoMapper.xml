@@ -3,7 +3,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.todoserver.mapper.TodoMapper">
+    <insert id="insert" parameterType="com.example.todoserver.web.dto.TodoInsertDTO">
+        insert into tbl_todo (title) values (#{title})
+    </insert>
+
     <select id="getTime" resultType="java.lang.String">
         select now();
+    </select>
+
+    <select id="getListAll" resultType="com.example.todoserver.domain.Todo">
+        select * from tbl_todo
     </select>
 </mapper>
