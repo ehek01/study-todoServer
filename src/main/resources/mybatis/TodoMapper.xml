@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.todoserver.mapper.TodoMapper">
-    <insert id="insert" parameterType="com.example.todoserver.web.dto.TodoInsertDTO">
+    <insert id="insert" parameterType="com.example.todoserver.domain.Todo">
         insert into tbl_todo (title) values (#{title})
     </insert>
 
